@@ -24,12 +24,12 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
   return [...todos.filter(todo => !todo.isComplete), ...todos.filter(todo => todo.isComplete)].map((todo, index)=>(
     <div className={todo.isComplete? 'todo-row complete':'todo-row'} key={index}> 
         <div className='row my-4 p-2 border border-1' style={{borderRadius:'8px'}}>
-          <div className='col-md-6 col-12'>
+          <div className='col-8'>
             <div key={todo.id} onClick={()=>completeTodo(todo.id)}>
               {todo.text}
             </div>
           </div>
-          <div className='col-md-6 col-12'>
+          <div className='col-4'>
             <div className='icons align-right' style={{ float: 'right' }}>
 
             {!todo.isComplete? (
