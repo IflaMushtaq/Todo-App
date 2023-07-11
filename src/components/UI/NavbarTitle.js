@@ -1,30 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText,
 } from 'reactstrap';
 
-function NavbarTitle(args) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+function NavbarTitle() {
   return (
     <div>
-      <Navbar className='bg-dark px-5'{...args}>
+      <Navbar className='bg-dark px-5'>
         <NavbarBrand className='text-white'>TODO</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-          <NavbarText className='text-white'>WELCOME, IFLA!</NavbarText>
+        <NavbarText className='text-white'>WELCOME, IFLA!</NavbarText>
       </Navbar>
     </div>
   );

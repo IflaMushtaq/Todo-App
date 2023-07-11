@@ -13,21 +13,18 @@ function TodoForm(props) {
 
     const handleSubmit=(e)=>{
         e.preventDefault();
- 
         props.onSubmit({
             id:Math.floor(Math.random()*10000),
             text:input
         });
-
         setInput('');
     };
-    //console.log(props.edit.value);
     return (
-        <form className='todo-form' onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             {props.edit?(
                 <>
                 <div>
-                    <input type='text' placeholder='Update a Task' value={input} name='text' className='todo-input form-control form-control-lg my-3' onChange={changeHandler} ref={inputRef}/>
+                    <input type='text' placeholder='Update a Task' value={input} name='text' className='form-control form-control-lg my-3' onChange={changeHandler} ref={inputRef}/>
                 </div>
                 <button className='btn btn-success align-right' style={{ float: 'right' }}>Update Todo</button>
                 </>
@@ -35,7 +32,7 @@ function TodoForm(props) {
                 <>
                     <div className='fw-bolder my-5'>CREATE TODO</div>
                     <div>
-                        <input type='text' placeholder='Add a Task' value={input} name='text' className='todo-input form-control form-control-lg my-3' onChange={changeHandler} ref={inputRef}/>
+                        <input type='text' placeholder='Add a Task' value={input} name='text' className='form-control form-control-lg my-3' onChange={changeHandler} ref={inputRef}/>
                     </div>
                     <button className='btn btn-primary align-right' style={{ float: 'right' }}>CREATE</button>
                 </>

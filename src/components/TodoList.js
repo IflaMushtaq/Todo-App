@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import TodoForm from './TodoForm';
 import Todo from './Todo';
 import NavbarTitle from './UI/NavbarTitle';
-import { Badge } from 'reactstrap';
 
 function TodoList() {
   const [todos, setTodos]=useState([]);
@@ -14,7 +13,6 @@ function TodoList() {
     }
     const newTodos=[todo, ...todos]
     setTodos(newTodos)
-    console.log(...todos)
   }
   
   //Update Task
@@ -41,7 +39,7 @@ function TodoList() {
     });
     setTodos(updatedTodos);
   }
-  console.log(todos)
+
   return (
     <div>
       <NavbarTitle/>
